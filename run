@@ -1,0 +1,13 @@
+from pinterest_scraper import scraper as s
+from selenium import webdriver
+import requests 
+from bs4 import BeautifulSoup
+import webbrowser, sys
+
+options = webdriver.ChromeOptions() 
+chrome = webdriver.Chrome()
+ph = s.Pinterest_Helper('burneraccout66@gmail.com' , 'superninja1234.', chrome)
+images = ph.runme("https://www.pinterest.co.uk/braundphotos/glitchtech-art/")
+print = (images)
+s.download(images, r"D:\Photography\Uni\Year 2\Exploring Posibilities\Scraper\Images")
+s.download(images)
